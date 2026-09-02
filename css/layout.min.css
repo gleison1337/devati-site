@@ -708,19 +708,19 @@
 ======================================================= */
 .whatsapp-float-btn {
   position: fixed;
-  right: 25px;
-  bottom: 25px;
-  width: 54px;
-  height: 54px;
+  right: 18px;
+  bottom: 75px; /* Posiciona acima do botão 'Topo' */
+  width: 50px;
+  height: 50px;
   background-color: #25d366;
   color: #ffffff !important;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 28px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
-  z-index: 9998; /* Fica acima do conteúdo, sem conflitar com modais */
+  z-index: 9998;
   transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   text-decoration: none !important;
 }
@@ -734,7 +734,7 @@
 /* Tooltip lateral suave ao passar o mouse */
 .whatsapp-tooltip {
   position: absolute;
-  right: 66px;
+  right: 60px;
   background: #232328;
   color: #ffffff;
   font-size: 12px;
@@ -767,16 +767,16 @@
   transform: translateX(0);
 }
 
-/* Ajuste fino para não sobrepor o botão de voltar ao topo (que fica à esquerda ou mais acima) */
+/* Ajuste Responsivo para Celular */
 @media (max-width: 768px) {
   .whatsapp-float-btn {
-    right: 18px;
-    bottom: 18px;
-    width: 48px;
-    height: 48px;
-    font-size: 26px;
+    right: 14px;
+    bottom: 65px; /* Mantém a distância do botão 'Topo' em telas menores */
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
   }
   .whatsapp-tooltip {
-    display: none; /* Desativa balão em telas de toque */
+    display: none;
   }
 }
